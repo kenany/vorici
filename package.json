@@ -1,0 +1,40 @@
+{
+  "name": "vorici",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "bundle": "npm run css && npm run js && npm run html",
+    "html": "sed -r 's/index.js/bundle.js/g' < index.html | html-inline > bundle.html",
+    "js": "browserify -g uglifyify -t babelify -p bundle-collapser/plugin index.js | uglifyjs -cm > bundle.js",
+    "css": "postcss -u postcss-cssnext -u cssnano style.css > bundle.css",
+    "dev": "npm run css && budo index.js --live -- -t babelify",
+    "size": "npm run js && gzip -9 < bundle.js | wc -c | pretty-bytes"
+  },
+  "dependencies": {
+    "chromatic-orb": "^1.1.0",
+    "factorial": "^0.0.2",
+    "geometric-variance": "^1.0.0",
+    "global": "^4.3.0",
+    "griddle-react": "^0.3.1",
+    "number-grouper": "^0.0.1",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "round-to": "^1.1.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "budo": "^7.1.0",
+    "bundle-collapser": "^1.2.1",
+    "cssnano": "^3.4.0",
+    "html-inline": "^1.2.0",
+    "postcss-cli": "^2.3.3",
+    "postcss-cssnext": "^2.4.0",
+    "pretty-bytes": "^3.0.0",
+    "uglify-js": "^2.6.1",
+    "uglifyify": "^3.0.1"
+  }
+}
