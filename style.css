@@ -19,10 +19,6 @@ h1 {
   text-align: center;
 }
 
-hr {
-  border-color: #171717;
-}
-
 div#content {
   width: 61.8%;
   background: #222324;
@@ -34,12 +30,6 @@ div#content {
   padding-top: 15px;
   font-family: Arial;
   font-size: 110%;
-}
-
-div.form {
-  width: 100%;
-  margin-bottom: 2%;
-  margin-top: 2%;
 }
 
 .entry {
@@ -54,19 +44,6 @@ div.form {
   border-radius: 3px;
   border: solid 1px;
   border-color: #555555;
-}
-
-span.rowTitle {
-  width: 30%;
-  padding-right: 2px;
-}
-
-span.rowEntry {
-  width: 60%;
-}
-
-table.result {
-  width: 100%;
 }
 
 table.formTable {
@@ -94,22 +71,6 @@ td.rowField {
 
 .griddle tr:nth-child(odd) {
   background: #292929;
-}
-
-tr.reverseStripe:nth-child(odd) {
-  background: #333333;
-}
-
-tr.reverseStripe:nth-child(even) {
-  background: #292929;
-}
-
-tr.best:nth-child(even) {
-  background: #303C30;
-}
-
-tr.best:nth-child(odd) {
-  background: #2A392A;
 }
 
 .griddle thead tr:nth-child(odd) {
@@ -152,10 +113,6 @@ td {
   border-color: #555566;
 }
 
-::placeholder {
-   opacity: 0.5;
-}
-
 button {
   background-color: #555;
   color: #EEEEEE;
@@ -172,64 +129,6 @@ button {
 
 button:hover {
   background-color: #444;
-}
-
-a:link {
-  color: #5555EE;
-}
-
-a:visited {
-  color: #994499;
-}
-
-div.results {
-  margin-bottom: 2.5%;
-  margin-top: 2.5%;
-}
-
-div.etc {
-  width: 100%;
-  color: #999999;
-  font-size: 80%;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-}
-
-img {
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: -1px;
-}
-
-span.tablesubtitle {
-  font-size: 80%;
-  padding-top: 0px;
-  margin-top: 0px;
-}
-
-.best {
-  color: #EEFFEE;
-  border-left: 2px solid #666666;
-  border-right: 2px solid #666666;
-}
-
-table.griddle thead th {
-  cursor: pointer;
-  transition: background-color 300ms ease-out;
-}
-
-table.griddle thead th:hover {
-  background-color: #3F3F3F;
-}
-
-td.long {
-  width: 22.5%;
-  text-align: center;
-}
-
-td.squish {
-  width: 0%;
 }
 
 td.accept {
