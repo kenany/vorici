@@ -93,7 +93,6 @@ class Vorici extends React.Component {
             <td className="rowField"></td>
             <td className="rowField">Sockets</td>
             <td className="rowField"></td>
-            <td className="accept"></td>
           </tr>
         </thead>
         <tbody>
@@ -126,9 +125,6 @@ class Vorici extends React.Component {
                 onChange={this.onChange.bind(this, 'intelligence')}
                 value={this.state.intelligence || ''}
                 placeholder="int"/>
-            </td>
-            <td className="accept">
-              <button id="calcButton" className="go">Calculate</button>
             </td>
           </tr>
           <tr className="formRow colors">
