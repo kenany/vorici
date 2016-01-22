@@ -12,7 +12,7 @@ import grouper from 'number-grouper';
 import voriciChance from './probability';
 
 const voriciRecipes = [
-  {red: 0, green: 0, blue: 0, cost: 1, description: 'Drop Chance'},
+  {red: 0, green: 0, blue: 0, cost: 0, description: 'Drop Chance'},
   {red: 1, green: 0, blue: 0, cost: 4, description: '1R'},
   {red: 0, green: 1, blue: 0, cost: 4, description: '1G'},
   {red: 0, green: 0, blue: 1, cost: 4, description: '1B'},
