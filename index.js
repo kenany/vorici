@@ -37,6 +37,25 @@ function std(p) {
   return Math.sqrt(geovar(p));
 }
 
+class NumberGrouperComponent extends React.Component {
+  render() {
+    return <span>{grouper(this.props.data)}</span>;
+  }
+}
+
+class PercentComponent extends React.Component {
+  render() {
+    return <span>{`${this.props.data}%`}</span>;
+  }
+}
+
+const columnMetadata = [
+  {columnName: 'Success Chance', customComponent: PercentComponent},
+  {columnName: 'Average Attempts', customComponent: NumberGrouperComponent},
+  {columnName: 'Average Cost', customComponent: NumberGrouperComponent},
+  {columnName: 'Standard Deviation', customComponent: NumberGrouperComponent}
+];
+
 class Vorici extends React.Component {
   constructor() {
     super();
@@ -59,10 +78,10 @@ class Vorici extends React.Component {
     return {
       'Craft Type': type,
       'Success Chance': round(100 * p, 5),
-      'Average Attempts': grouper(round(1 / p, 1)),
+      'Average Attempts': round(1 / p, 1),
       'Cost per Try': cost,
-      'Average Cost': grouper(cost * round(1 / p, 1)),
-      'Standard Deviation': grouper(round(std(p), 2))
+      'Average Cost': round(cost / p, 1),
+      'Standard Deviation': round(std(p), 2)
     };
   }
   render() {
@@ -163,7 +182,8 @@ class Vorici extends React.Component {
         showPager={false}
         resultsPerPage={results.length}
         initialSort={'Average Cost'}
-        results={results}/>
+        results={results}
+        columnMetadata={columnMetadata}/>
     </div>
     );
   }
