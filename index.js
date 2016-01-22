@@ -8,8 +8,8 @@ import dom from 'react-dom';
 import geovar from 'geometric-variance';
 import Griddle from 'griddle-react';
 import grouper from 'number-grouper';
-
-import voriciChance from './probability';
+import socketColorsChance from 'socket-colors-chance';
+import assign from 'lodash.assign';
 
 const voriciRecipes = [
   {red: 0, green: 0, blue: 0, cost: 0, description: 'Drop Chance'},
@@ -73,10 +73,18 @@ class Vorici extends React.Component {
     catch (e) {}
 
     voriciRecipes.forEach(r => {
-      const opts = this.state;
-      opts.recipe = r;
+      const opts = assign({}, this.state);
+
+      if (opts.sockets < 1) {
+        return;
+      }
+
+      opts.red -= r.red;
+      opts.green -= r.green;
+      opts.blue -= r.blue;
+      opts.sockets = opts.sockets - r.red - r.green - r.blue;
       try {
-        results.push(this.generateRow(r.description, voriciChance(opts), r.cost));
+        results.push(this.generateRow(r.description, socketColorsChance(opts), r.cost));
       }
       catch (e) {
         return;
