@@ -37,17 +37,8 @@ function std(p) {
   return Math.sqrt(geovar(p));
 }
 
-class NumberGrouperComponent extends React.Component {
-  render() {
-    return <span>{grouper(this.props.data)}</span>;
-  }
-}
-
-class PercentComponent extends React.Component {
-  render() {
-    return <span>{`${this.props.data}%`}</span>;
-  }
-}
+const NumberGrouperComponent = props => <span>{grouper(props.data)}</span>;
+const PercentComponent = props => <span>{`${props.data}%`}</span>;
 
 const columnMetadata = [
   {columnName: 'Success Chance', customComponent: PercentComponent},
