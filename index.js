@@ -106,7 +106,7 @@ class Vorici extends React.Component {
       <h1>Vorici Chromatic Calculator</h1>
       <table className="formTable">
         <thead>
-          <tr className="titles">
+          <tr>
             <td className="rowTitle"></td>
             <td className="rowField"></td>
             <td className="rowField">Sockets</td>
@@ -114,7 +114,7 @@ class Vorici extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <tr className="socks">
+          <tr>
             <td className="rowTitle"></td>
             <td className="rowField"></td>
             <td className="rowField">
@@ -124,7 +124,7 @@ class Vorici extends React.Component {
                 placeholder="#"/>
             </td>
           </tr>
-          <tr className="reqs">
+          <tr>
             <td className="rowTitle">Requirements</td>
             <td className="rowField">
               <input className="entry red"
@@ -145,7 +145,7 @@ class Vorici extends React.Component {
                 placeholder="int"/>
             </td>
           </tr>
-          <tr className="colors">
+          <tr>
             <td className="rowTitle">Desired Colors</td>
             <td className="rowField">
               <input className="entry red"
