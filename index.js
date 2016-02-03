@@ -171,7 +171,7 @@ class Vorici extends React.Component {
       <Griddle
         useGriddleStyles={false}
         showPager={false}
-        resultsPerPage={results.length}
+        resultsPerPage={Infinity}
         initialSort={'Average Cost'}
         results={results}
         columnMetadata={columnMetadata}/>
