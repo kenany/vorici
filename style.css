@@ -65,6 +65,10 @@ td.rowField {
   width: 15%;
 }
 
+.griddle table {
+  width: 100%;
+}
+
 .griddle tr:nth-child(even) {
   background: #333333;
 }
