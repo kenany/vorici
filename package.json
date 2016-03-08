@@ -19,7 +19,7 @@
     "lodash.assign": "^4.0.0",
     "number-grouper": "^0.0.1",
     "react": "^0.14.6",
-    "react-dom": "^0.14.6",
+    "react-dom": "^0.14.7",
     "round-to": "^1.1.0",
     "socket-colors-chance": "^1.0.0",
     "underscore": "^1.8.3"
