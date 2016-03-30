@@ -6,7 +6,7 @@
     "bundle": "npm run css && npm run js && npm run html",
     "html": "sed -r 's/index.js/bundle.js/g' < index.html | html-inline > bundle.html",
     "js": "browserify -g uglifyify -t babelify -p bundle-collapser/plugin index.js | uglifyjs -cm > bundle.js",
-    "css": "postcss -u postcss-cssnext -u cssnano style.css > bundle.css",
+    "css": "postcss -u postcss-cssnext style.css | cssnano > bundle.css",
     "dev": "npm run css && budo index.js --live -- -t babelify",
     "size": "npm run js && gzip -9 < bundle.js | wc -c | pretty-bytes"
   },
@@ -31,7 +31,7 @@
     "browserify": "^13.0.0",
     "budo": "^8.0.0",
     "bundle-collapser": "^1.2.1",
-    "cssnano": "^3.4.0",
+    "cssnano-cli": "^1.0.3",
     "html-inline": "^1.2.0",
     "postcss-cli": "^2.3.3",
     "postcss-cssnext": "^2.4.0",
