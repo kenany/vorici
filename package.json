@@ -18,7 +18,7 @@
     "griddle-react": "^0.4.1",
     "lodash.assign": "^4.0.0",
     "number-grouper": "^0.0.1",
-    "react": "^0.14.6",
+    "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "round-to": "^1.1.0",
     "socket-colors-chance": "^1.0.0",
