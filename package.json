@@ -31,7 +31,7 @@
     "browserify": "^13.0.0",
     "budo": "^8.0.0",
     "bundle-collapser": "^1.2.1",
-    "cssnano-cli": "^1.0.3",
+    "cssnano-cli": "^1.0.4",
     "html-inline": "^1.2.0",
     "postcss-cli": "^2.3.3",
     "postcss-cssnext": "^2.5.1",
