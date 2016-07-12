@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "chromatic-orb": "^1.1.0",
-    "factorial": "^0.0.2",
     "geometric-variance": "^1.0.0",
     "global": "^4.3.0",
     "griddle-react": "^0.6.0",
