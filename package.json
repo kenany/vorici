@@ -15,7 +15,7 @@
     "geometric-variance": "^1.0.0",
     "global": "^4.3.0",
     "griddle-react": "^0.6.0",
-    "lodash.assign": "^4.0.0",
+    "lodash.assign": "^4.1.0",
     "number-grouper": "^0.0.1",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
