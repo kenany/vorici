@@ -11,7 +11,7 @@
     "size": "npm run js && gzip -9 < bundle.js | wc -c | pretty-bytes"
   },
   "dependencies": {
-    "chromatic-orb": "^1.1.0",
+    "chromatic-orb": "^1.2.0",
     "geometric-variance": "^1.0.0",
     "global": "^4.3.0",
     "griddle-react": "^0.6.0",
