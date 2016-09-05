@@ -33,7 +33,7 @@
     "cssnano-cli": "^1.0.3",
     "html-inline": "^1.2.0",
     "postcss-cli": "^2.3.3",
-    "postcss-cssnext": "^2.5.1",
+    "postcss-cssnext": "^2.8.0",
     "pretty-bytes-cli": "^2.0.0",
     "uglify-js": "^2.6.1",
     "uglifyify": "^3.0.1"
