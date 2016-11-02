@@ -37,8 +37,23 @@ function std(p) {
   return Math.sqrt(geovar(p));
 }
 
+function generateRow(type, p, cost) {
+  return {
+    'Craft Type': type,
+    'Success Chance': round(100 * p, 5),
+    'Average Attempts': round(1 / p, 1),
+    'Cost per Try': cost,
+    'Average Cost': round(cost / p, 1),
+    'Standard Deviation': round(std(p), 2)
+  };
+}
+
 const NumberGrouperComponent = props => <span>{grouper(props.data)}</span>;
 const PercentComponent = props => <span>{`${props.data}%`}</span>;
+
+NumberGrouperComponent.propTypes = PercentComponent.propTypes = {
+  data: React.PropTypes.number.isRequired
+};
 
 const columnMetadata = [
   {columnName: 'Success Chance', customComponent: PercentComponent},
@@ -60,31 +75,26 @@ class Vorici extends React.Component {
       blue: null
     };
   }
+
   onChange(type, e) {
     const newState = {};
     newState[type] = parseInt(e.target.value, 10);
     this.setState(newState);
   }
-  generateRow(type, p, cost) {
-    return {
-      'Craft Type': type,
-      'Success Chance': round(100 * p, 5),
-      'Average Attempts': round(1 / p, 1),
-      'Cost per Try': cost,
-      'Average Cost': round(cost / p, 1),
-      'Standard Deviation': round(std(p), 2)
-    };
-  }
+
   render() {
     const results = [];
     try {
-      results.push(this.generateRow('Chromatic', chromatic(this.state), 1));
+      results.push(generateRow('Chromatic', chromatic(this.state), 1));
     }
-    catch (e) {}
+    catch (e) {
+      // invalid number of sockets or desired colors, don't push this row
+    }
 
     voriciRecipes.forEach(r => {
       const opts = assign({}, this.state);
 
+      // invalid number of sockets, don't add this row
       if (opts.sockets < 1) {
         return;
       }
@@ -94,9 +104,10 @@ class Vorici extends React.Component {
       opts.blue -= r.blue;
       opts.sockets = opts.sockets - r.red - r.green - r.blue;
       try {
-        results.push(this.generateRow(r.description, socketColorsChance(opts), r.cost));
+        results.push(generateRow(r.description, socketColorsChance(opts), r.cost));
       }
       catch (e) {
+        // invalid number of sockets or desired colors, don't push this row
         return;
       }
     });
