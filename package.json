@@ -12,7 +12,7 @@
     "lint": "eslint index.js"
   },
   "dependencies": {
-    "chromatic-orb": "^1.1.0",
+    "chromatic-orb": "^1.2.0",
     "geometric-variance": "^1.0.0",
     "global": "^4.3.0",
     "griddle-react": "^0.7.0",
