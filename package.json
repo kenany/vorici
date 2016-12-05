@@ -21,7 +21,7 @@
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "round-to": "^1.1.0",
-    "socket-colors-chance": "^1.0.0",
+    "socket-colors-chance": "^1.1.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
