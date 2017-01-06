@@ -48,19 +48,22 @@ function generateRow(type, p, cost) {
   };
 }
 
+function numericalSort(x) {
+  return parseInt(x, 10);
+}
+
 const NumberGrouperComponent = props => <span>{grouper(props.data)}</span>;
 const PercentComponent = props => <span>{`${props.data}%`}</span>;
-
-NumberGrouperComponent.propTypes = PercentComponent.propTypes = {
-  data: React.PropTypes.number.isRequired
-};
 
 const columnMetadata = [
   {columnName: 'Success Chance', customComponent: PercentComponent},
   {columnName: 'Average Attempts', customComponent: NumberGrouperComponent},
+  {columnName: 'Cost per Try'},
   {columnName: 'Average Cost', customComponent: NumberGrouperComponent},
   {columnName: 'Standard Deviation', customComponent: NumberGrouperComponent}
 ];
+
+columnMetadata.forEach((column) => column.customCompareFn = numericalSort);
 
 class Vorici extends React.Component {
   constructor() {
