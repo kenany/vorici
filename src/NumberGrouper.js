@@ -4,12 +4,12 @@ import grouper from 'number-grouper';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const NumberGrouper = ({ data }) => {
-  return <span>{grouper(data)}</span>;
+const NumberGrouper = ({ value }) => {
+  return <span>{grouper(value)}</span>;
 };
 
 NumberGrouper.propTypes = {
-  data: PropTypes.number
+  value: PropTypes.number
 };
 
 export default NumberGrouper;

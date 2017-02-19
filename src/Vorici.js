@@ -4,7 +4,11 @@ import chromatic from 'chromatic-orb';
 import React from 'react';
 import round from 'round-to';
 import geovar from 'geometric-variance';
-import Griddle from 'griddle-react';
+import Griddle, {
+  ColumnDefinition,
+  plugins,
+  RowDefinition
+} from 'griddle-react';
 import socketColorsChance from 'socket-colors-chance';
 import assign from 'lodash.assign';
 
@@ -47,22 +51,6 @@ function generateRow(type, p, cost) {
     'Standard Deviation': round(std(p), 2)
   };
 }
-
-function numericalSort(x) {
-  return parseInt(x, 10);
-}
-
-const columnMetadata = [
-  {columnName: 'Success Chance', customComponent: PercentValue},
-  {columnName: 'Average Attempts', customComponent: NumberGrouper},
-  {columnName: 'Cost per Try'},
-  {columnName: 'Average Cost', customComponent: NumberGrouper},
-  {columnName: 'Standard Deviation', customComponent: NumberGrouper}
-];
-
-columnMetadata.forEach((column) => {
-  column.customCompareFn = numericalSort;
-});
 
 class Vorici extends React.Component {
   constructor() {
@@ -181,12 +169,25 @@ class Vorici extends React.Component {
           </tbody>
         </table>
         <Griddle
-          useGriddleStyles={false}
-          showPager={false}
-          resultsPerPage={Infinity}
-          initialSort={'Average Cost'}
-          results={results}
-          columnMetadata={columnMetadata}/>
+          components={{
+            Filter: () => null,
+            Pagination: () => null,
+            SettingsToggle: () => null
+          }}
+          pageProperties={{ pageSize: Infinity }}
+          plugins={[plugins.LocalPlugin]}
+          sortProperties={[{ id: 'Average Cost', sortAscending: true }]}
+          data={results}
+        >
+          <RowDefinition>
+            <ColumnDefinition id={'Craft Type'} />
+            <ColumnDefinition id={'Success Chance'} customComponent={PercentValue} />
+            <ColumnDefinition id={'Average Attempts'} customComponent={NumberGrouper} />
+            <ColumnDefinition id={'Cost per Try'} customComponent={NumberGrouper} />
+            <ColumnDefinition id={'Average Cost'} customComponent={NumberGrouper} />
+            <ColumnDefinition id={'Standard Deviation'} customComponent={NumberGrouper} />
+          </RowDefinition>
+        </Griddle>
       </div>
     );
   }
