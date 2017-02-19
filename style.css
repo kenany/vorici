@@ -65,19 +65,19 @@ td.rowField {
   width: 15%;
 }
 
-.griddle table {
+.griddle {
   width: 100%;
 }
 
-.griddle tr:nth-child(even) {
+.griddle-table tr:nth-child(even) {
   background: #333333;
 }
 
-.griddle tr:nth-child(odd) {
+.griddle-table tr:nth-child(odd) {
   background: #292929;
 }
 
-.griddle thead tr:nth-child(odd) {
+.griddle-table thead tr:nth-child(odd) {
   background: #333333;
 }
 

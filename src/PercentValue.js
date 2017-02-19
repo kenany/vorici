@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const PercentValue = ({ data }) => {
-  return <span>{data + '%'}</span>;
+const PercentValue = ({ value }) => {
+  return <span>{value + '%'}</span>;
 };
 
 PercentValue.propTypes = {
-  data: PropTypes.number
+  value: PropTypes.number
 };
 
 export default PercentValue;
