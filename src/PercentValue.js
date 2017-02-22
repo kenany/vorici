@@ -9,4 +9,4 @@ PercentValue.propTypes = {
   data: PropTypes.number
 };
 
-module.exports = PercentValue;
+export default PercentValue;

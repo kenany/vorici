@@ -12,4 +12,4 @@ NumberGrouper.propTypes = {
   data: PropTypes.number
 };
 
-module.exports = NumberGrouper;
+export default NumberGrouper;

@@ -1,15 +1,13 @@
 {
-  "plugins": [
-    "check-es2015-constants",
-    "syntax-jsx",
-    "transform-es2015-arrow-functions",
-    "transform-es2015-block-scoping",
-    "transform-es2015-classes",
-    "transform-es2015-destructuring",
-    "transform-es2015-function-name",
-    "transform-es2015-modules-commonjs",
-    "transform-es2015-parameters",
-    "transform-es2015-template-literals",
-    "transform-react-jsx"
+  "presets": [
+    ["env", {
+      "targets": {
+        "ie": 9,
+        "uglify": true
+      },
+      "useBuiltins": false,
+      "modules": false
+    }],
+    "react"
   ]
 }

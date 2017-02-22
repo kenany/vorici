@@ -19,7 +19,7 @@ h1 {
   text-align: center;
 }
 
-div#content {
+div#root {
   width: 61.8%;
   background: #222324;
   margin-left: 17%;
