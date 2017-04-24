@@ -9,7 +9,7 @@
     "css": "postcss -u postcss-cssnext style.css | cssnano > bundle.css",
     "dev": "npm run css && budo index.js --live -- -t babelify",
     "size": "npm run js && gzip -9 < bundle.js | wc -c | pretty-bytes",
-    "lint": "eslint index.js"
+    "lint": "eslint ."
   },
   "dependencies": {
     "chromatic-orb": "^1.1.0",
@@ -18,6 +18,7 @@
     "griddle-react": "^0.8.1",
     "lodash.assign": "^4.0.0",
     "number-grouper": "^0.0.1",
+    "prop-types": "^15.5.8",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "round-to": "^2.0.0",
@@ -31,8 +32,10 @@
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
     "babel-plugin-transform-es2015-block-scoping": "^6.18.0",
     "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-es2015-function-name": "^6.9.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-es2015-parameters": "^6.23.0",
     "babel-plugin-transform-es2015-template-literals": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babelify": "^7.2.0",
