@@ -22,7 +22,8 @@ const BANKAI_OPTIONS = {
   },
   js: {
     transform: 'babelify'
-  }
+  },
+  uglify: process.env.NODE_ENV === 'production'
 };
 
 function buildHTML(assets, callback) {
