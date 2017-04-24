@@ -5,7 +5,7 @@
   "scripts": {
     "bundle": "node tools/build.js",
     "postbundle": "npm run css",
-    "css": "postcss -u postcss-cssnext style.css | cssnano > out/bundle.css",
+    "css": "postcss style.css -u postcss-cssnext | cssnano > out/bundle.css",
     "size": "npm run bundle && gzip -9 < out/bundle.js | wc -c | pretty-bytes",
     "start": "bankai -j [ --transform babelify ] index.js",
     "lint": "eslint ."
@@ -44,7 +44,7 @@
     "eslint-plugin-react": "^6.5.0",
     "graceful-fs": "^4.1.11",
     "mkdirp": "^0.5.1",
-    "postcss-cli": "^2.3.3",
+    "postcss-cli": "^3.2.0",
     "postcss-cssnext": "^2.5.1",
     "pretty-bytes-cli": "^2.0.0",
     "pump": "^1.0.2",
