@@ -8,7 +8,7 @@
     "css": "postcss style.css -u postcss-cssnext | cssnano > out/bundle.css",
     "size": "npm run bundle && gzip -9 < out/bundle.js | wc -c | pretty-bytes",
     "start": "bankai -j [ --transform babelify ] index.js",
-    "lint": "eslint ."
+    "lint": "eslint index.js src tools"
   },
   "dependencies": {
     "chromatic-orb": "^1.1.0",
