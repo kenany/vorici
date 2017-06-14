@@ -38,7 +38,7 @@
     "babel-plugin-transform-es2015-template-literals": "^6.8.0",
     "babel-plugin-transform-react-jsx": "^6.8.0",
     "babelify": "^7.2.0",
-    "bankai": "^7.5.0",
+    "bankai": "^8.0.0",
     "cssnano-cli": "^1.0.3",
     "eslint": "^3.9.1",
     "eslint-plugin-react": "^7.0.0",
