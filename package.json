@@ -40,7 +40,7 @@
     "babelify": "^7.2.0",
     "bankai": "^7.5.0",
     "cssnano-cli": "^1.0.3",
-    "eslint": "^3.9.1",
+    "eslint": "^4.1.0",
     "eslint-plugin-react": "^7.0.0",
     "graceful-fs": "^4.1.11",
     "mkdirp": "^0.5.1",
