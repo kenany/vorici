@@ -25,7 +25,7 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "@kenan/eslint-config": "^4.0.0",
+    "@kenan/eslint-config": "^5.0.0",
     "babel-plugin-check-es2015-constants": "^6.8.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
