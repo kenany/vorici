@@ -45,7 +45,7 @@
     "graceful-fs": "^4.1.11",
     "mkdirp": "^0.5.1",
     "postcss-cli": "^3.2.0",
-    "postcss-cssnext": "^2.5.1",
+    "postcss-cssnext": "^3.0.0",
     "pretty-bytes-cli": "^2.0.0",
     "pump": "^1.0.2",
     "run-parallel": "^1.1.6"
