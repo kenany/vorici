@@ -110,7 +110,6 @@ class Vorici extends React.Component {
       }
       catch (e) {
         // invalid number of sockets or desired colors, don't push this row
-        return;
       }
     });
 
