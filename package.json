@@ -6,7 +6,7 @@
     "preanalyze": "NODE_ENV=production webpack --profile --json > stats.json",
     "analyze": "webpack-bundle-analyzer stats.json out",
     "build": "webpack",
-    "lint": "eslint index.js src tools"
+    "lint": "eslint index.js src"
   },
   "dependencies": {
     "chromatic-orb": "^1.1.0",
