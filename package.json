@@ -3,8 +3,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "preanalyze": "webpack --profile --json > stats.json",
-    "analyze": "webpack-bundle-analyzer stats.json",
+    "preanalyze": "NODE_ENV=production webpack --profile --json > stats.json",
+    "analyze": "webpack-bundle-analyzer stats.json out",
     "build": "webpack",
     "lint": "eslint index.js src tools"
   },
