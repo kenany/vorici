@@ -114,80 +114,80 @@ class Vorici extends React.Component {
     });
 
     return (
-    <div>
-      <h1>Vorici Chromatic Calculator</h1>
-      <table className="formTable">
-        <thead>
-          <tr>
-            <td className="rowTitle"></td>
-            <td className="rowField"></td>
-            <td className="rowField">Sockets</td>
-            <td className="rowField"></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className="rowTitle"></td>
-            <td className="rowField"></td>
-            <td className="rowField">
-              <input className="entry white"
-                onChange={this.onChange.bind(this, 'sockets')}
-                value={this.state.sockets || ''}
-                placeholder="#"/>
-            </td>
-          </tr>
-          <tr>
-            <td className="rowTitle">Requirements</td>
-            <td className="rowField">
-              <input className="entry red"
-                onChange={this.onChange.bind(this, 'strength')}
-                value={this.state.strength || ''}
-                placeholder="str"/>
-            </td>
-            <td className="rowField">
-              <input className="entry green"
-                onChange={this.onChange.bind(this, 'dexterity')}
-                value={this.state.dexterity || ''}
-                placeholder="dex"/>
-            </td>
-            <td className="rowField">
-              <input className="entry blue"
-                onChange={this.onChange.bind(this, 'intelligence')}
-                value={this.state.intelligence || ''}
-                placeholder="int"/>
-            </td>
-          </tr>
-          <tr>
-            <td className="rowTitle">Desired Colors</td>
-            <td className="rowField">
-              <input className="entry red"
-                onChange={this.onChange.bind(this, 'red')}
-                value={this.state.red || ''}
-                placeholder="R"/>
-            </td>
-            <td className="rowField">
-              <input className="entry green"
-                onChange={this.onChange.bind(this, 'green')}
-                value={this.state.green || ''}
-                placeholder="G"/>
-            </td>
-            <td className="rowField">
-              <input className="entry blue"
-                onChange={this.onChange.bind(this, 'blue')}
-                value={this.state.blue || ''}
-                placeholder="B"/>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <Griddle
-        useGriddleStyles={false}
-        showPager={false}
-        resultsPerPage={Infinity}
-        initialSort={'Average Cost'}
-        results={results}
-        columnMetadata={columnMetadata}/>
-    </div>
+      <div>
+        <h1>Vorici Chromatic Calculator</h1>
+        <table className="formTable">
+          <thead>
+            <tr>
+              <td className="rowTitle"></td>
+              <td className="rowField"></td>
+              <td className="rowField">Sockets</td>
+              <td className="rowField"></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="rowTitle"></td>
+              <td className="rowField"></td>
+              <td className="rowField">
+                <input className="entry white"
+                  onChange={this.onChange.bind(this, 'sockets')}
+                  value={this.state.sockets || ''}
+                  placeholder="#"/>
+              </td>
+            </tr>
+            <tr>
+              <td className="rowTitle">Requirements</td>
+              <td className="rowField">
+                <input className="entry red"
+                  onChange={this.onChange.bind(this, 'strength')}
+                  value={this.state.strength || ''}
+                  placeholder="str"/>
+              </td>
+              <td className="rowField">
+                <input className="entry green"
+                  onChange={this.onChange.bind(this, 'dexterity')}
+                  value={this.state.dexterity || ''}
+                  placeholder="dex"/>
+              </td>
+              <td className="rowField">
+                <input className="entry blue"
+                  onChange={this.onChange.bind(this, 'intelligence')}
+                  value={this.state.intelligence || ''}
+                  placeholder="int"/>
+              </td>
+            </tr>
+            <tr>
+              <td className="rowTitle">Desired Colors</td>
+              <td className="rowField">
+                <input className="entry red"
+                  onChange={this.onChange.bind(this, 'red')}
+                  value={this.state.red || ''}
+                  placeholder="R"/>
+              </td>
+              <td className="rowField">
+                <input className="entry green"
+                  onChange={this.onChange.bind(this, 'green')}
+                  value={this.state.green || ''}
+                  placeholder="G"/>
+              </td>
+              <td className="rowField">
+                <input className="entry blue"
+                  onChange={this.onChange.bind(this, 'blue')}
+                  value={this.state.blue || ''}
+                  placeholder="B"/>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Griddle
+          useGriddleStyles={false}
+          showPager={false}
+          resultsPerPage={Infinity}
+          initialSort={'Average Cost'}
+          results={results}
+          columnMetadata={columnMetadata}/>
+      </div>
     );
   }
 }
