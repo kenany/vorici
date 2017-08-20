@@ -12,7 +12,7 @@
     "chromatic-orb": "^1.1.0",
     "geometric-variance": "^1.0.0",
     "global": "^4.3.0",
-    "griddle-react": "^0.8.1",
+    "griddle-react": "^1.8.0",
     "lodash.assign": "^4.0.0",
     "number-grouper": "^0.0.1",
     "prop-types": "^15.5.8",
