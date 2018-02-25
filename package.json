@@ -6,7 +6,9 @@
     "preanalyze": "NODE_ENV=production webpack --profile --json > stats.json",
     "analyze": "webpack-bundle-analyzer stats.json out",
     "build": "webpack",
-    "lint": "eslint index.js src"
+    "lint": "eslint index.js src",
+    "pretest": "npm run lint && NODE_ENV=production npm run build",
+    "test": "bundlesize -f out/static/js/bundle.js"
   },
   "dependencies": {
     "chromatic-orb": "^1.1.0",
@@ -29,6 +31,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "bundlesize": "^0.16.0",
     "css-loader": "^0.28.4",
     "eslint": "^4.4.1",
     "eslint-plugin-react": "^7.1.0",
