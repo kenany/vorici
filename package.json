@@ -38,7 +38,7 @@
     "preact": "^8.2.5",
     "preact-compat": "^3.11.0",
     "style-loader": "^0.19.1",
-    "webpack": "^3.4.1",
+    "webpack": "^4.0.0",
     "webpack-bundle-analyzer": "^2.2.1"
   }
 }
