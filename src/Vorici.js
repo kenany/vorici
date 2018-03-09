@@ -10,7 +10,7 @@ import Griddle, {
   RowDefinition
 } from 'griddle-react';
 import socketColorsChance from 'socket-colors-chance';
-import assign from 'lodash.assign';
+import { assign } from 'lodash-es';
 
 import NumberGrouper from './NumberGrouper';
 import PercentValue from './PercentValue';

@@ -2,6 +2,7 @@
 
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const LodashWebpackPlugin = require('lodash-webpack-plugin');
 const path = require('path');
 const process = require('process');
 const webpack = require('webpack');
@@ -22,6 +23,9 @@ module.exports = {
   },
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   resolve: {
+    alias: {
+      lodash: 'lodash-es'
+    },
     extensions: ['.js', '.json', '.jsx']
   },
   module: {
@@ -63,6 +67,7 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, 'public', 'index.html')
     }),
+    new LodashWebpackPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': `'${process.env.NODE_ENV}'`
