@@ -11,13 +11,16 @@ module.exports = {
   entry: path.resolve(__dirname, 'index.js'),
   output: {
     path: path.resolve(__dirname, 'out'),
-    pathinfo: true,
     filename: 'static/js/bundle.js',
     chunkFilename: 'static/js/[name].chunk.js',
     publicPath: '/',
     devtoolModuleFilenameTemplate: (info) =>
       path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
   },
+  optimization: {
+    minimize: process.env.NODE_ENV === 'production'
+  },
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   resolve: {
     extensions: ['.js', '.json', '.jsx']
   },
