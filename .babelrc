@@ -2,11 +2,8 @@
   "presets": [
     ["env", {
       "targets": {
-        "ie": 9,
-        "uglify": true
-      },
-      "useBuiltins": false,
-      "modules": false
+        "browsers": "> 5%"
+      }
     }],
     "react"
   ]
