@@ -69,26 +69,3 @@ module.exports = {
     })
   ]
 };
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports.resolve = {
-    alias: {
-      'react': 'preact-compat/dist/preact-compat',
-      'react-dom': 'preact-compat/dist/preact-compat'
-    }
-  };
-
-  module.exports.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        comparisons: false,
-        warnings: false
-      },
-      output: {
-        ascii_only: true,
-        comments: false
-      },
-      sourceMap: true
-    })
-  );
-}
