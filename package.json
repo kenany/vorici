@@ -39,7 +39,7 @@
     "html-webpack-plugin": "^3.0.6",
     "lodash-webpack-plugin": "^0.11.4",
     "postcss-flexbugs-fixes": "^4.1.0",
-    "postcss-loader": "^2.0.6",
+    "postcss-loader": "^3.0.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.1.1",
     "webpack-bundle-analyzer": "^3.0.2",
