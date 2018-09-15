@@ -6,6 +6,6 @@
         "browsers": "> 5%"
       }
     }],
-    "react"
+    "@babel/preset-react"
   ]
 }
