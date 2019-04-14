@@ -16,25 +16,25 @@ import NumberGrouper from './NumberGrouper';
 import PercentValue from './PercentValue';
 
 const voriciRecipes = [
-  {red: 0, green: 0, blue: 0, cost: 0, description: 'Drop Chance'},
-  {red: 1, green: 0, blue: 0, cost: 4, description: '1R'},
-  {red: 0, green: 1, blue: 0, cost: 4, description: '1G'},
-  {red: 0, green: 0, blue: 1, cost: 4, description: '1B'},
-  {red: 2, green: 0, blue: 0, cost: 25, description: '2R'},
-  {red: 0, green: 2, blue: 0, cost: 25, description: '2G'},
-  {red: 0, green: 0, blue: 2, cost: 25, description: '2B'},
-  {red: 1, green: 1, blue: 0, cost: 15, description: '1R1G'},
-  {red: 1, green: 0, blue: 1, cost: 15, description: '1R1B'},
-  {red: 0, green: 1, blue: 1, cost: 15, description: '1G1B'},
-  {red: 3, green: 0, blue: 0, cost: 285, description: '3R'},
-  {red: 0, green: 3, blue: 0, cost: 285, description: '3G'},
-  {red: 0, green: 0, blue: 3, cost: 285, description: '3B'},
-  {red: 2, green: 1, blue: 0, cost: 100, description: '2R1G'},
-  {red: 2, green: 0, blue: 1, cost: 100, description: '2R1B'},
-  {red: 1, green: 2, blue: 0, cost: 100, description: '1R2G'},
-  {red: 0, green: 2, blue: 1, cost: 100, description: '2G1B'},
-  {red: 1, green: 0, blue: 2, cost: 100, description: '1R2B'},
-  {red: 0, green: 1, blue: 2, cost: 100, description: '1G2B'}
+  { red: 0, green: 0, blue: 0, cost: 0, description: 'Drop Chance' },
+  { red: 1, green: 0, blue: 0, cost: 4, description: '1R' },
+  { red: 0, green: 1, blue: 0, cost: 4, description: '1G' },
+  { red: 0, green: 0, blue: 1, cost: 4, description: '1B' },
+  { red: 2, green: 0, blue: 0, cost: 25, description: '2R' },
+  { red: 0, green: 2, blue: 0, cost: 25, description: '2G' },
+  { red: 0, green: 0, blue: 2, cost: 25, description: '2B' },
+  { red: 1, green: 1, blue: 0, cost: 15, description: '1R1G' },
+  { red: 1, green: 0, blue: 1, cost: 15, description: '1R1B' },
+  { red: 0, green: 1, blue: 1, cost: 15, description: '1G1B' },
+  { red: 3, green: 0, blue: 0, cost: 285, description: '3R' },
+  { red: 0, green: 3, blue: 0, cost: 285, description: '3G' },
+  { red: 0, green: 0, blue: 3, cost: 285, description: '3B' },
+  { red: 2, green: 1, blue: 0, cost: 100, description: '2R1G' },
+  { red: 2, green: 0, blue: 1, cost: 100, description: '2R1B' },
+  { red: 1, green: 2, blue: 0, cost: 100, description: '1R2G' },
+  { red: 0, green: 2, blue: 1, cost: 100, description: '2G1B' },
+  { red: 1, green: 0, blue: 2, cost: 100, description: '1R2B' },
+  { red: 0, green: 1, blue: 2, cost: 100, description: '1G2B' }
 ];
 
 function std(p) {
