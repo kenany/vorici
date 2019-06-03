@@ -7,7 +7,7 @@
     "analyze": "webpack-bundle-analyzer stats.json out",
     "build": "webpack",
     "lint": "eslint index.js src",
-    "pretest": "npm run lint && NODE_ENV=production npm run build",
+    "pretest": "npm run lint && npm run --prod build",
     "test": "bundlesize -f out/static/js/bundle.js"
   },
   "dependencies": {
