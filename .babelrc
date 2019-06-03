@@ -1,11 +1,7 @@
 {
   "plugins": ["lodash"],
   "presets": [
-    ["@babel/preset-env", {
-      "targets": {
-        "browsers": "> 5%"
-      }
-    }],
+    "@babel/preset-env",
     "@babel/preset-react"
   ]
 }
