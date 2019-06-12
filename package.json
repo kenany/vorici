@@ -13,7 +13,7 @@
   "dependencies": {
     "chromatic-orb": "^1.1.0",
     "geometric-variance": "^1.0.0",
-    "global": "^4.3.0",
+    "global": "4.4.0",
     "griddle-react": "^1.6.0",
     "lodash-es": "^4.17.7",
     "number-grouper": "^0.0.1",
