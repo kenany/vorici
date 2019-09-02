@@ -81,7 +81,7 @@ class Vorici extends React.Component {
       // invalid number of sockets or desired colors, don't push this row
     }
 
-    voriciRecipes.forEach(r => {
+    voriciRecipes.forEach((r) => {
       const opts = assign({}, this.state);
 
       // invalid number of sockets, don't add this row
@@ -94,7 +94,9 @@ class Vorici extends React.Component {
       opts.blue -= r.blue;
       opts.sockets = opts.sockets - r.red - r.green - r.blue;
       try {
-        results.push(generateRow(r.description, socketColorsChance(opts), r.cost));
+        results.push(
+          generateRow(r.description, socketColorsChance(opts), r.cost)
+        );
       }
       catch (e) {
         // invalid number of sockets or desired colors, don't push this row
