@@ -37,7 +37,7 @@
     "bundlesize": "0.18.0",
     "css-loader": "4.3.0",
     "eslint": "7.11.0",
-    "eslint-plugin-react": "7.21.3",
+    "eslint-plugin-react": "7.21.4",
     "html-webpack-plugin": "4.5.0",
     "lodash-webpack-plugin": "0.11.5",
     "postcss-flexbugs-fixes": "4.2.1",
