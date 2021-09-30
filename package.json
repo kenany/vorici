@@ -43,7 +43,7 @@
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-loader": "6.1.1",
     "style-loader": "3.2.1",
-    "webpack": "5.51.1",
+    "webpack": "5.55.1",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.8.0"
   }
