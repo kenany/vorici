@@ -2,7 +2,7 @@
 
 import chromatic from 'chromatic-orb';
 import React from 'react';
-import round from 'round-to';
+import { roundTo as round } from 'round-to';
 import geovar from 'geometric-variance';
 import Griddle, {
   ColumnDefinition,
@@ -37,10 +37,19 @@ const voriciRecipes = [
   { red: 0, green: 1, blue: 2, cost: 100, description: '1G2B' }
 ];
 
+/**
+ * @param {number} p
+ * @returns {number}
+ */
 function std(p) {
   return Math.sqrt(geovar(p));
 }
 
+/**
+ * @param {string} type
+ * @param {number} p
+ * @param {number} cost
+ */
 function generateRow(type, p, cost) {
   return {
     'Craft Type': type,
