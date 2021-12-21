@@ -11,7 +11,7 @@
     "test": "bundlesize -f out/static/js/bundle.js"
   },
   "dependencies": {
-    "chromatic-orb": "1.2.2",
+    "chromatic-orb": "1.2.3",
     "geometric-variance": "1.0.0",
     "global": "4.4.0",
     "griddle-react": "1.13.1",
