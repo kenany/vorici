@@ -18,8 +18,8 @@
     "lodash-es": "4.17.21",
     "number-grouper": "0.0.1",
     "prop-types": "15.8.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "round-to": "6.0.0",
     "socket-colors-chance": "2.0.0",
     "underscore": "1.13.2"
